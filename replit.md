@@ -2,7 +2,7 @@
 
 ## Overview
 
-Jade Royale is a multi-tenant casino platform featuring a subdomain-based architecture for agent management and player registration. The application supports three distinct access modes: a main landing page, agent-specific registration portals, and a master dashboard for administrative oversight. Built with React, Express, and PostgreSQL, it provides real-time registration tracking, alert systems, and comprehensive player management capabilities.
+Jade Royale is a promotional landing page with user registration functionality for an online casino platform. Built with React, Express, and PostgreSQL, it provides a clean, simple interface for new users to discover and join the platform.
 
 ## User Preferences
 
@@ -14,15 +14,14 @@ Preferred communication style: Simple, everyday language.
 
 **Technology Stack**: React with TypeScript, Vite build system, Wouter for routing
 
-The frontend uses a component-based architecture with shadcn/ui components built on Radix UI primitives. The application implements a subdomain-based routing system that determines which interface to display based on the hostname:
+The frontend uses a component-based architecture with shadcn/ui components built on Radix UI primitives. The application consists of two main pages:
 
-- Main domain (`jaderoyale` or empty subdomain): Displays marketing landing page with navigation to agent and master portals
-- Agent subdomains (`genai`, `test`): Shows player registration forms specific to each agent
-- Master subdomain (`webmasterx3`): Provides administrative dashboard for monitoring all registrations
+- **Main Landing Page** (`/`): Promotional page with hero section, platform features, and call-to-action buttons to register
+- **Registration Page** (`/register`): User registration form for creating new accounts
 
-**State Management**: TanStack Query (React Query) handles all server state with automatic caching, background refetching disabled in favor of explicit invalidation. Local component state managed with React hooks.
+**State Management**: TanStack Query (React Query) handles all server state with automatic caching. Local component state managed with React hooks.
 
-**Design System**: Tailwind CSS with custom dark theme color palette. CSS variables enable consistent theming across components. Custom animations for particles background, floating casino chips, and slide-in alerts.
+**Design System**: Tailwind CSS with custom dark theme color palette. CSS variables enable consistent theming across components. Custom animations for particles background and floating casino chips.
 
 **Form Handling**: React Hook Form with Zod validation ensures type-safe form submissions with client-side validation before API calls.
 
@@ -30,19 +29,9 @@ The frontend uses a component-based architecture with shadcn/ui components built
 
 **Technology Stack**: Express.js with TypeScript, ESM module format
 
-The server implements a RESTful API structure with the following endpoints:
+The server implements a simple RESTful API with the following endpoint:
 
-- `GET /api/registrations` - Retrieve all player registrations
-- `GET /api/registrations/agent/:agentCode` - Filter registrations by agent
-- `POST /api/registrations` - Create new player registration with duplicate username validation
-- `PATCH /api/registrations/:id/status` - Update player status (pending/active/suspended)
-- `DELETE /api/registrations/:id` - Remove registration
-- `GET /api/alerts` - Fetch unread registration alerts
-- `PATCH /api/alerts/:id/read` - Mark alert as read
-- `DELETE /api/alerts/:id` - Remove alert
-- `GET /api/stats` - Retrieve dashboard statistics
-
-**Request Logging**: Custom middleware captures request duration and response data for API endpoints, with automatic truncation for long responses.
+- `POST /api/register` - Create new user account with duplicate username validation
 
 **Development Mode**: Vite integration in middleware mode provides HMR during development. Production builds serve static assets from `dist/public`.
 
@@ -50,53 +39,26 @@ The server implements a RESTful API structure with the following endpoints:
 
 **Database**: PostgreSQL accessed via Neon serverless driver for connection pooling and serverless compatibility
 
-**Schema Design**: Three main tables defined using Drizzle ORM:
+**Schema Design**: Single table defined using Drizzle ORM:
 
-1. **users** - Base user table (currently unused, available for future authentication)
+1. **users** - User accounts
    - id (UUID primary key)
    - username (unique)
    - email, fullName, phone, password
 
-2. **playerRegistrations** - Player sign-up records
-   - id (UUID primary key)
-   - username, email, fullName, phone, password
-   - agentCode (identifies referring agent)
-   - status (pending/active/suspended)
-   - createdAt (timestamp)
-   - metadata (JSONB for extensibility - IP, referrer, etc.)
+**Data Access Layer**: Storage interface abstraction in `server/storage.ts` uses raw SQL queries via Neon driver. This provides direct database access while maintaining type safety through TypeScript interfaces. All database column names use snake_case, mapped to camelCase in TypeScript objects.
 
-3. **registrationAlerts** - Real-time notifications
-   - id (UUID primary key)
-   - playerId (foreign key to playerRegistrations)
-   - message (alert content)
-   - isRead (text field storing "true"/"false")
-   - createdAt (timestamp)
-
-**Data Access Layer**: Storage interface abstraction in `server/storage.ts` uses raw SQL queries via Neon driver rather than Drizzle query builder. This provides direct database access while maintaining type safety through TypeScript interfaces. All database column names use snake_case, mapped to camelCase in TypeScript objects.
-
-**Migration Strategy**: Drizzle Kit configured for schema push with migrations stored in `./migrations` directory. Schema source file: `shared/schema.ts`.
+**Migration Strategy**: Drizzle Kit configured for schema push. Schema source file: `shared/schema.ts`.
 
 ### Authentication & Authorization
 
-**Current State**: No authentication implemented. The system relies on subdomain-based access control, with agent codes embedded in registration forms.
+**Current State**: Basic user registration implemented. Passwords are currently stored as plain text.
 
-**Future Considerations**: Password fields exist in schema but are currently stored as plain text. Production deployment would require:
+**Future Considerations**: Production deployment would require:
 - Password hashing (bcrypt/argon2)
 - Session management (connect-pg-simple for PostgreSQL-backed sessions)
 - Authentication middleware
-- Protected routes for master dashboard
-
-### Multi-Tenancy Model
-
-**Subdomain Routing**: Client-side logic (`lib/subdomain.ts`) parses hostname to determine tenant context:
-
-- Predefined agent subdomains maintain a whitelist approach
-- Master subdomain restricted to single known value
-- New agents require code deployment to add subdomain support
-
-**Agent Isolation**: Each agent operates independently through their subdomain, but shares the same database. Agent code automatically populated in registration forms based on subdomain, creating logical data separation.
-
-**Scalability Consideration**: Current subdomain whitelist approach limits dynamic agent onboarding. Future enhancement could include database-driven agent configuration.
+- Login functionality
 
 ## External Dependencies
 
@@ -106,55 +68,42 @@ The server implements a RESTful API structure with the following endpoints:
 - Connection string via `DATABASE_URL` or `POSTGRES_URL` environment variables
 - Serverless driver enables HTTP-based database access
 
-**UI Components**: Radix UI primitives provide accessible, unstyled components:
-- Dialogs, dropdowns, popovers for overlays
-- Form controls (checkbox, radio, select, switch)
-- Navigation components (accordion, tabs, menubar)
-- All styled via Tailwind CSS with shadcn/ui conventions
+**UI Components**: Radix UI primitives provide accessible, unstyled components, all styled via Tailwind CSS with shadcn/ui conventions
 
 ### Build & Development Tools
 
-**Vite**: Frontend build system and dev server
-- Plugin ecosystem includes Replit-specific integrations (error overlay, cartographer, dev banner)
-- Path aliases for clean imports (@/, @shared, @assets)
+**Vite**: Frontend build system and dev server with path aliases for clean imports (@/, @shared, @assets)
 
-**TypeScript**: Strict mode enabled with ESNext module resolution
-- Shared types between client/server via `shared/` directory
-- Path mapping configured for monorepo structure
+**TypeScript**: Strict mode enabled with ESNext module resolution. Shared types between client/server via `shared/` directory.
 
-**Drizzle**: ORM and migration toolkit
-- Schema-first approach with Zod integration for runtime validation
-- Type generation from database schema
+**Drizzle**: ORM and migration toolkit with schema-first approach and Zod integration for runtime validation
 
 ### Styling & Fonts
 
-**Tailwind CSS**: Utility-first styling with custom configuration
-- Dark theme as default
-- Custom color palette using CSS variables
-- Responsive breakpoints for mobile optimization
+**Tailwind CSS**: Utility-first styling with custom dark theme configuration and custom color palette using CSS variables
 
-**Google Fonts**: Three font families loaded on-demand:
+**Google Fonts**: Three font families:
 - Inter (sans-serif, primary UI font)
 - Playfair Display (serif, headings)
 - JetBrains Mono (monospace, code/data)
 
 ### Data Management
 
-**TanStack Query**: Asynchronous state management
-- Centralized fetch wrapper with error handling
-- Optimistic updates and cache invalidation
-- Configurable refetch behavior (disabled by default)
+**TanStack Query**: Asynchronous state management with centralized fetch wrapper and error handling
 
-**React Hook Form**: Form state management
-- Zod resolver for schema validation
-- Uncontrolled inputs for performance
+**React Hook Form**: Form state management with Zod resolver for schema validation
 
-**Zod**: Runtime type validation and schema definition
-- Shared between frontend validation and backend enforcement
-- Integration with Drizzle for database schema generation
+**Zod**: Runtime type validation and schema definition, shared between frontend validation and backend enforcement
 
-### Date Handling
+## Recent Changes (October 2025)
 
-**date-fns**: Date formatting and manipulation
-- Used for relative timestamps ("2 hours ago")
-- Lightweight alternative to moment.js
+Simplified the application from a complex multi-tenant casino platform to a basic promotional landing page with user registration:
+
+- Removed subdomain-based routing and multi-tenancy features
+- Removed master dashboard and agent registration portals
+- Removed player registration management system (status updates, filtering, etc.)
+- Removed real-time alert system for registrations
+- Simplified database schema to single users table
+- Simplified backend API to single registration endpoint
+- Removed featured games section and VIP club promotional content
+- Created clean, focused landing page with registration flow
