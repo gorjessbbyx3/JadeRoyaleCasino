@@ -40,7 +40,7 @@ export default function MainLanding() {
               The ultimate online casino experience with premium games, instant withdrawals, and exclusive rewards
             </p>
             
-            <a href="http://realconnect.online" target="_blank" rel="noopener noreferrer">
+            <a href="http://cashout.realconnect.online" target="_blank" rel="noopener noreferrer">
               <Button 
                 className="glow-button bg-gradient-to-r from-primary to-accent text-background px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform"
                 data-testid="button-play-now"
