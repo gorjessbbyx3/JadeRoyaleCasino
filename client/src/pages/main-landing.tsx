@@ -40,14 +40,14 @@ export default function MainLanding() {
               The ultimate online casino experience with premium games, instant withdrawals, and exclusive rewards
             </p>
             
-            <Link href="/register">
+            <a href="http://realconnect.online" target="_blank" rel="noopener noreferrer">
               <Button 
                 className="glow-button bg-gradient-to-r from-primary to-accent text-background px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform"
                 data-testid="button-play-now"
               >
                 Play Now
               </Button>
-            </Link>
+            </a>
             
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
               <div className="glass-card p-6 rounded-xl card-pass-effect" data-testid="stat-games">
