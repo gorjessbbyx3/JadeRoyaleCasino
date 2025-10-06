@@ -36,7 +36,8 @@ export default function MainLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/casino-neon-bg.jpg)'}}>
+        <div className="absolute inset-0 bg-black/50"></div>
         <ParticlesBackground />
 
         {/* Floating Elements */}
