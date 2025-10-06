@@ -1,4 +1,4 @@
-import { Crown, Users, Shield, Clock, Star, Zap, TrendingUp, Trophy } from 'lucide-react';
+import { Crown, Users, Shield, Clock, Star, Zap, TrendingUp, Trophy, Flame } from 'lucide-react';
 import ParticlesBackground from '@/components/particles-background';
 import CasinoChip from '@/components/casino-chip';
 import { Button } from '@/components/ui/button';
@@ -13,10 +13,12 @@ export default function MainLanding() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3 animate-slide-in-left">
               <div className="relative">
-                <CasinoChip />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-pulse-glow">
+                  <Flame className="w-6 h-6 text-background" />
+                </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse-glow"></div>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-serif font-bold neon-text-enhanced">JADE ROYALE</h1>
+              <h1 className="text-2xl sm:text-3xl font-black tracking-wider neon-text-enhanced" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h1>
               <div className="hidden sm:flex items-center gap-2 ml-4">
                 <Star className="w-4 h-4 text-primary animate-spin-slow" />
                 <span className="text-xs text-primary font-semibold">PREMIUM</span>
@@ -193,8 +195,10 @@ export default function MainLanding() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center">
             <div className="flex items-center justify-center gap-4 mb-6">
-              <CasinoChip />
-              <h2 className="text-3xl font-serif font-bold neon-text-enhanced">JADE ROYALE</h2>
+              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                <Flame className="w-6 h-6 text-background" />
+              </div>
+              <h2 className="text-3xl font-black tracking-wider neon-text-enhanced" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h2>
             </div>
             <p className="text-muted-foreground text-lg mb-6">
               &copy; 2024 Jade Royale. All rights reserved. | 18+ | Play Responsibly
