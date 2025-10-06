@@ -36,8 +36,12 @@ export default function MainLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/casino-neon-bg.jpg)'}}>
-        <div className="absolute inset-0 bg-black/50"></div>
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" 
+          style={{backgroundImage: 'url(/casino-neon-bg.jpg)'}}
+        ></div>
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
         <ParticlesBackground />
 
         {/* Floating Elements */}
@@ -47,7 +51,7 @@ export default function MainLanding() {
           <div className="absolute bottom-40 left-1/4 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-bounce-slow"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-20">
+        <div className="max-w-7xl mx-auto relative z-30">
           <div className="text-center">
             <div className="animate-fade-in-up">
               <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8 border border-primary/30">
