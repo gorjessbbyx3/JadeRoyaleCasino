@@ -43,22 +43,22 @@ export default function MainLanding() {
             <Link href="/register">
               <Button 
                 className="glow-button bg-gradient-to-r from-primary to-accent text-background px-12 py-5 rounded-full text-xl font-bold shadow-2xl hover:scale-105 transition-transform"
-                data-testid="button-register-now"
+                data-testid="button-play-now"
               >
-                Register Now
+                Play Now
               </Button>
             </Link>
             
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-              <div className="glass-card p-6 rounded-xl" data-testid="stat-games">
+              <div className="glass-card p-6 rounded-xl card-pass-effect" data-testid="stat-games">
                 <div className="text-3xl font-bold text-primary mb-2">500+</div>
                 <div className="text-sm text-muted-foreground">Premium Games</div>
               </div>
-              <div className="glass-card p-6 rounded-xl" data-testid="stat-support">
+              <div className="glass-card p-6 rounded-xl card-pass-effect" data-testid="stat-support">
                 <div className="text-3xl font-bold text-accent mb-2">24/7</div>
                 <div className="text-sm text-muted-foreground">Live Support</div>
               </div>
-              <div className="glass-card p-6 rounded-xl" data-testid="stat-payouts">
+              <div className="glass-card p-6 rounded-xl card-pass-effect" data-testid="stat-payouts">
                 <div className="text-3xl font-bold text-primary mb-2">$1M+</div>
                 <div className="text-sm text-muted-foreground">Daily Payouts</div>
               </div>
@@ -74,7 +74,7 @@ export default function MainLanding() {
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group" data-testid="feature-payouts">
+            <div className="text-center group card-pass-effect p-6 rounded-xl" data-testid="feature-payouts">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Clock className="w-10 h-10 text-background" />
               </div>
@@ -82,7 +82,7 @@ export default function MainLanding() {
               <p className="text-muted-foreground">Withdraw your winnings in seconds</p>
             </div>
 
-            <div className="text-center group" data-testid="feature-security">
+            <div className="text-center group card-pass-effect p-6 rounded-xl" data-testid="feature-security">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="w-10 h-10 text-background" />
               </div>
@@ -90,7 +90,7 @@ export default function MainLanding() {
               <p className="text-muted-foreground">Bank-grade encryption & security</p>
             </div>
 
-            <div className="text-center group" data-testid="feature-rewards">
+            <div className="text-center group card-pass-effect p-6 rounded-xl" data-testid="feature-rewards">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Crown className="w-10 h-10 text-background" />
               </div>
@@ -98,7 +98,7 @@ export default function MainLanding() {
               <p className="text-muted-foreground">Amazing bonuses & cashback</p>
             </div>
 
-            <div className="text-center group" data-testid="feature-support">
+            <div className="text-center group card-pass-effect p-6 rounded-xl" data-testid="feature-support">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Users className="w-10 h-10 text-background" />
               </div>
