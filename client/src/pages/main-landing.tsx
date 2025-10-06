@@ -1,4 +1,3 @@
-
 import { Crown, Users, Shield, Clock, Star, Zap, TrendingUp, Trophy } from 'lucide-react';
 import ParticlesBackground from '@/components/particles-background';
 import CasinoChip from '@/components/casino-chip';
@@ -24,7 +23,7 @@ export default function MainLanding() {
               </div>
             </div>
             <Link href="/register">
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-primary via-accent to-primary hover:scale-110 transition-all duration-300 animate-slide-in-right glow-button-premium shadow-2xl"
                 data-testid="button-nav-register"
               >
@@ -39,15 +38,15 @@ export default function MainLanding() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <ParticlesBackground />
-        
+
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-float-slow"></div>
           <div className="absolute top-40 right-20 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-float-delayed"></div>
           <div className="absolute bottom-40 left-1/4 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-bounce-slow"></div>
         </div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
+
+        <div className="max-w-7xl mx-auto relative z-20">
           <div className="text-center">
             <div className="animate-fade-in-up">
               <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8 border border-primary/30">
@@ -55,7 +54,7 @@ export default function MainLanding() {
                 <span className="text-sm font-semibold text-primary">Elite Casino Experience</span>
                 <div className="w-2 h-2 bg-accent rounded-full animate-ping"></div>
               </div>
-              
+
               <h2 className="text-5xl sm:text-7xl lg:text-9xl font-serif font-black mb-6 leading-none">
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight">
                   EXPERIENCE
@@ -65,16 +64,16 @@ export default function MainLanding() {
                   LUXURY
                 </span>
               </h2>
-              
+
               <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-delayed">
-                The ultimate premium casino destination with cutting-edge games, lightning-fast payouts, 
+                The ultimate premium casino destination with cutting-edge games, lightning-fast payouts,
                 and exclusive VIP rewards that redefine online gaming excellence
               </p>
             </div>
-            
+
             <div className="animate-fade-in-up-delayed">
               <a href="http://cashout.realconnect.online" target="_blank" rel="noopener noreferrer">
-                <Button 
+                <Button
                   className="glow-button-mega bg-gradient-to-r from-primary via-accent to-primary text-background px-16 py-6 rounded-full text-2xl font-black shadow-2xl hover:scale-110 transition-all duration-500 relative overflow-hidden group"
                   data-testid="button-play-now"
                 >
@@ -84,7 +83,7 @@ export default function MainLanding() {
                   <TrendingUp className="w-6 h-6 ml-3" />
                 </Button>
               </a>
-              
+
               <div className="mt-4 text-sm text-muted-foreground animate-pulse">
                 <span className="inline-flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
@@ -92,7 +91,7 @@ export default function MainLanding() {
                 </span>
               </div>
             </div>
-            
+
             {/* Enhanced Stats Grid */}
             <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="glass-card-premium p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up group hover:scale-105 transition-all duration-500" data-testid="stat-games">
@@ -102,7 +101,7 @@ export default function MainLanding() {
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></div>
                 </div>
               </div>
-              
+
               <div className="glass-card-premium p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed group hover:scale-105 transition-all duration-500" data-testid="stat-support">
                 <div className="relative">
                   <div className="text-4xl font-black text-accent mb-3 group-hover:scale-110 transition-transform">24/7</div>
@@ -110,7 +109,7 @@ export default function MainLanding() {
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-accent to-primary rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></div>
                 </div>
               </div>
-              
+
               <div className="glass-card-premium p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed-more group hover:scale-105 transition-all duration-500" data-testid="stat-payouts">
                 <div className="relative">
                   <div className="text-4xl font-black text-primary mb-3 group-hover:scale-110 transition-transform">$5M+</div>
@@ -130,7 +129,7 @@ export default function MainLanding() {
           <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
           <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-slow-delayed"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary/30">
@@ -146,7 +145,7 @@ export default function MainLanding() {
               Experience gaming excellence with our premium features designed for the ultimate casino experience
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-premium hover:scale-105 transition-all duration-500 animate-fade-in-stagger-1" data-testid="feature-payouts">
               <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
