@@ -8,21 +8,22 @@ export default function MainLanding() {
   return (
     <div className="min-h-screen relative overflow-hidden" data-testid="main-landing">
       {/* Enhanced Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass-card-premium border-b border-border backdrop-blur-xl">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-card-ultra border-b-2 border-primary/30 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3 animate-slide-in-left">
               <div className="relative">
-                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary via-accent to-secondary flex items-center justify-center animate-rainbow-glow">
-                  <Flame className="w-8 h-8 text-background animate-electric-pulse" />
+                <div className="w-16 h-16 rounded-full morphing-gradient flex items-center justify-center animate-card-glow-intense shadow-2xl">
+                  <Flame className="w-8 h-8 text-background animate-electric-pulse drop-shadow-lg" />
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-accent to-primary rounded-full animate-rainbow-glow"></div>
-                <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse"></div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 morphing-gradient rounded-full animate-rainbow-glow shadow-lg"></div>
+                <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse shadow-md"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 animate-spin-slow blur-md"></div>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-black tracking-wider neon-text-rainbow animate-electric-pulse" style={{fontFamily: 'Cinzel, serif', WebkitTextStroke: '2px rgba(0, 0, 0, 0.8)', textShadow: '0 0 10px rgba(255, 105, 180, 0.5)'}}>JADE ROYALE</h1>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-wider neon-text-rainbow animate-electric-pulse text-shimmer animate-text-shimmer" style={{fontFamily: 'Cinzel, serif', WebkitTextStroke: '2px rgba(0, 0, 0, 0.8)', textShadow: '0 0 10px rgba(255, 105, 180, 0.5), 0 0 20px rgba(255, 69, 0, 0.3)'}}>JADE ROYALE</h1>
               <div className="hidden sm:flex items-center gap-2 ml-4">
-                <Star className="w-5 h-5 text-primary animate-spin-slow" />
-                <span className="text-sm text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text font-black">ELITE</span>
+                <Star className="w-5 h-5 text-primary animate-spin-slow drop-shadow-lg" />
+                <span className="text-sm text-transparent morphing-gradient bg-clip-text font-black animate-holographic">ELITE</span>
               </div>
             </div>
             <Link href="/register">
@@ -71,12 +72,22 @@ export default function MainLanding() {
               </div>
 
               <h2 className="text-6xl sm:text-8xl lg:text-9xl font-serif font-black mb-6 leading-none">
-                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced">
-                  WIN
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
+                    WIN
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent opacity-50 blur-sm animate-gradient-x bg-300%">
+                    WIN
+                  </div>
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-x-reverse bg-300% tracking-tight neon-text-enhanced">
-                  BIG
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-x-reverse bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
+                    BIG
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent opacity-50 blur-sm animate-gradient-x-reverse bg-300%">
+                    BIG
+                  </div>
                 </span>
               </h2>
 
@@ -109,27 +120,30 @@ export default function MainLanding() {
 
             {/* Enhanced Stats Grid */}
             <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="glass-card-premium p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up group hover:scale-105 transition-all duration-500" data-testid="stat-games">
+              <div className="glass-card-ultra p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up group hover:scale-105 transition-all duration-500 animate-card-glow-intense" data-testid="stat-games">
                 <div className="relative">
-                  <div className="text-4xl font-black text-primary mb-3 group-hover:scale-110 transition-transform">500+</div>
+                  <div className="text-5xl font-black text-transparent morphing-gradient bg-clip-text mb-3 group-hover:scale-110 transition-transform animate-text-shimmer">500+</div>
                   <div className="text-base text-muted-foreground font-medium">Premium Games</div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
               </div>
 
-              <div className="glass-card-premium p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed group hover:scale-105 transition-all duration-500" data-testid="stat-support">
+              <div className="glass-card-ultra p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed group hover:scale-105 transition-all duration-500 animate-card-glow-intense" data-testid="stat-support">
                 <div className="relative">
-                  <div className="text-4xl font-black text-accent mb-3 group-hover:scale-110 transition-transform">24/7</div>
+                  <div className="text-5xl font-black text-transparent morphing-gradient bg-clip-text mb-3 group-hover:scale-110 transition-transform animate-text-shimmer">24/7</div>
                   <div className="text-base text-muted-foreground font-medium">VIP Support</div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-accent to-primary rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
               </div>
 
-              <div className="glass-card-premium p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed-more group hover:scale-105 transition-all duration-500" data-testid="stat-payouts">
+              <div className="glass-card-ultra p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed-more group hover:scale-105 transition-all duration-500 animate-card-glow-intense" data-testid="stat-payouts">
                 <div className="relative">
-                  <div className="text-4xl font-black text-primary mb-3 group-hover:scale-110 transition-transform">$5M+</div>
+                  <div className="text-5xl font-black text-transparent morphing-gradient bg-clip-text mb-3 group-hover:scale-110 transition-transform animate-text-shimmer">$5M+</div>
                   <div className="text-base text-muted-foreground font-medium">Daily Payouts</div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
               </div>
             </div>
@@ -162,35 +176,39 @@ export default function MainLanding() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-premium hover:scale-105 transition-all duration-500 animate-fade-in-stagger-1" data-testid="feature-payouts">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                <Clock className="w-12 h-12 text-background" />
+            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-1 animate-card-glow-intense" data-testid="feature-payouts">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
+                <Clock className="w-12 h-12 text-background drop-shadow-lg" />
+                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-primary">Instant Payouts</h4>
+              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">Instant Payouts</h4>
               <p className="text-muted-foreground leading-relaxed">Lightning-fast withdrawals processed in under 60 seconds</p>
             </div>
 
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-premium hover:scale-105 transition-all duration-500 animate-fade-in-stagger-2" data-testid="feature-security">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                <Shield className="w-12 h-12 text-background" />
+            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-2 animate-card-glow-intense" data-testid="feature-security">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
+                <Shield className="w-12 h-12 text-background drop-shadow-lg" />
+                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-accent">Fort Knox Security</h4>
+              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">Fort Knox Security</h4>
               <p className="text-muted-foreground leading-relaxed">Military-grade encryption with 256-bit SSL protection</p>
             </div>
 
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-premium hover:scale-105 transition-all duration-500 animate-fade-in-stagger-3" data-testid="feature-rewards">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                <Crown className="w-12 h-12 text-background" />
+            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-3 animate-card-glow-intense" data-testid="feature-rewards">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
+                <Crown className="w-12 h-12 text-background drop-shadow-lg" />
+                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-primary">VIP Rewards</h4>
+              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">VIP Rewards</h4>
               <p className="text-muted-foreground leading-relaxed">Exclusive bonuses up to 500% and premium cashback</p>
             </div>
 
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-premium hover:scale-105 transition-all duration-500 animate-fade-in-stagger-4" data-testid="feature-support">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-xl">
-                <Users className="w-12 h-12 text-background" />
+            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-4 animate-card-glow-intense" data-testid="feature-support">
+              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
+                <Users className="w-12 h-12 text-background drop-shadow-lg" />
+                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-accent">Elite Support</h4>
+              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">Elite Support</h4>
               <p className="text-muted-foreground leading-relaxed">Dedicated VIP managers and 24/7 priority assistance</p>
             </div>
           </div>
