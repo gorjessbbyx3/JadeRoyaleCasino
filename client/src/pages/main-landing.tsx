@@ -43,7 +43,7 @@ export default function MainLanding() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-80" 
           style={{
-            backgroundImage: 'url(/casino-neon-bg.gif)',
+            backgroundImage: 'url(/casino-neon-bg.jpg)',
             backgroundAttachment: 'fixed'
           }}
         ></div>
@@ -70,11 +70,11 @@ export default function MainLanding() {
 
               <h2 className="text-6xl sm:text-8xl lg:text-9xl font-serif font-black mb-6 leading-none">
                 <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced">
-                  EXPERIENCE
+                  WIN
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-x-reverse bg-300% tracking-tight neon-text-enhanced">
-                  LUXURY
+                  BIG
                 </span>
               </h2>
 
