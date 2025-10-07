@@ -19,7 +19,7 @@ export default function MainLanding() {
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-accent to-primary rounded-full animate-rainbow-glow"></div>
                 <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse"></div>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-black tracking-wider neon-text-rainbow animate-electric-pulse" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h1>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-wider neon-text-rainbow animate-electric-pulse" style={{fontFamily: 'Cinzel, serif', WebkitTextStroke: '2px rgba(0, 0, 0, 0.8)', textShadow: '0 0 10px rgba(255, 105, 180, 0.5)'}}>JADE ROYALE</h1>
               <div className="hidden sm:flex items-center gap-2 ml-4">
                 <Star className="w-5 h-5 text-primary animate-spin-slow" />
                 <span className="text-sm text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text font-black">ELITE</span>
