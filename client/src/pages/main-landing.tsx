@@ -6,7 +6,7 @@ import { Link } from 'wouter';
 
 export default function MainLanding() {
   return (
-    <div className="min-h-screen gradient-bg relative overflow-hidden" data-testid="main-landing">
+    <div className="min-h-screen relative overflow-hidden" data-testid="main-landing">
       {/* Enhanced Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass-card-premium border-b border-border backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
