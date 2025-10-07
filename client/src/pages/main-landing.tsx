@@ -42,7 +42,7 @@ export default function MainLanding() {
       <section 
         className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen"
         style={{
-          backgroundImage: 'url(/casino-neon-bg.jpg)',
+          backgroundImage: 'url(/hero-bg.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
