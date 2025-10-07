@@ -43,7 +43,7 @@ export default function MainLanding() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-80" 
           style={{
-            backgroundImage: 'url(/casino-neon-bg.jpg)',
+            backgroundImage: 'url(/casino-neon-bg.gif)',
             backgroundAttachment: 'fixed'
           }}
         ></div>
