@@ -7,36 +7,90 @@ import { Link } from 'wouter';
 export default function MainLanding() {
   return (
     <div className="min-h-screen relative overflow-hidden" data-testid="main-landing">
-      {/* Enhanced Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass-card-ultra border-b-2 border-primary/30 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <div className="flex items-center gap-3 animate-slide-in-left">
-              <div className="relative">
-                <div className="w-16 h-16 rounded-full morphing-gradient flex items-center justify-center animate-card-glow-intense shadow-2xl">
-                  <Flame className="w-8 h-8 text-background animate-electric-pulse drop-shadow-lg" />
+      {/* Redesigned Navigation Header */}
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-card-ultra border-b-2 border-primary/30 backdrop-blur-2xl">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-primary/5 to-black/40"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex justify-between items-center h-24">
+            {/* Logo Section */}
+            <div className="flex items-center gap-4 animate-slide-in-left">
+              <div className="relative group">
+                {/* Main logo circle */}
+                <div className="w-20 h-20 rounded-full morphing-gradient flex items-center justify-center animate-card-glow-intense shadow-2xl relative overflow-hidden">
+                  <Flame className="w-10 h-10 text-background animate-electric-pulse drop-shadow-lg relative z-10" />
+                  {/* Inner glow effect */}
+                  <div className="absolute inset-2 rounded-full bg-gradient-to-br from-white/20 to-transparent opacity-50"></div>
                 </div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 morphing-gradient rounded-full animate-rainbow-glow shadow-lg"></div>
-                <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse shadow-md"></div>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 animate-spin-slow blur-md"></div>
+                
+                {/* Floating decorative elements */}
+                <div className="absolute -top-3 -right-3 w-8 h-8 morphing-gradient rounded-full animate-rainbow-glow shadow-lg opacity-80">
+                  <div className="absolute inset-1 rounded-full bg-gradient-to-br from-white/30 to-transparent"></div>
+                </div>
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse shadow-md">
+                  <Star className="w-3 h-3 text-background absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </div>
+                
+                {/* Orbiting ring */}
+                <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-spin-slow"></div>
+                <div className="absolute inset-2 rounded-full border border-accent/40 animate-spin-slow" style={{animationDirection: 'reverse'}}></div>
               </div>
-              <h1 className="text-3xl sm:text-4xl font-black tracking-wider neon-text-rainbow animate-electric-pulse text-shimmer animate-text-shimmer" style={{fontFamily: 'Cinzel, serif', WebkitTextStroke: '2px rgba(0, 0, 0, 0.8)', textShadow: '0 0 10px rgba(255, 105, 180, 0.5), 0 0 20px rgba(255, 69, 0, 0.3)'}}>JADE ROYALE</h1>
-              <div className="hidden sm:flex items-center gap-2 ml-4">
-                <Star className="w-5 h-5 text-primary animate-spin-slow drop-shadow-lg" />
-                <span className="text-sm text-transparent morphing-gradient bg-clip-text font-black animate-holographic">ELITE</span>
+              
+              {/* Brand text */}
+              <div className="flex flex-col">
+                <h1 className="text-4xl sm:text-5xl font-black tracking-widest neon-text-rainbow animate-text-shimmer relative" 
+                    style={{
+                      fontFamily: 'Cinzel, serif', 
+                      WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)', 
+                      textShadow: '0 0 20px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 69, 0, 0.6), 0 0 60px rgba(138, 43, 226, 0.4)'
+                    }}>
+                  JADE ROYALE
+                  {/* Text reflection effect */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10 opacity-30 animate-pulse"></div>
+                </h1>
+                <div className="flex items-center gap-3 mt-1">
+                  <div className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-4 py-1 border border-primary/30">
+                    <Crown className="w-4 h-4 text-primary animate-bounce-gentle" />
+                    <span className="text-sm text-transparent morphing-gradient bg-clip-text font-black animate-holographic tracking-wide">PREMIUM CASINO</span>
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+                  </div>
+                </div>
               </div>
             </div>
-            <Link href="/register">
-              <Button
-                className="bg-gradient-to-r from-primary via-accent to-secondary hover:scale-110 transition-all duration-300 animate-slide-in-right glow-button-premium shadow-2xl text-lg font-black px-8 py-3"
-                data-testid="button-nav-register"
-              >
-                <Zap className="w-5 h-5 mr-2 animate-pulse" />
-                JOIN ELITE
-              </Button>
-            </Link>
+
+            {/* Navigation Actions */}
+            <div className="flex items-center gap-4 animate-slide-in-right">
+              {/* Live indicator */}
+              <div className="hidden md:flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-green-500/30">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
+                <span className="text-sm font-semibold text-green-400">2,847 ONLINE</span>
+              </div>
+
+              {/* Register button */}
+              <Link href="/register">
+                <Button
+                  className="relative bg-gradient-to-r from-primary via-accent to-secondary hover:scale-110 transition-all duration-500 glow-button-mega shadow-2xl text-xl font-black px-10 py-4 rounded-full border-2 border-transparent overflow-hidden group"
+                  data-testid="button-nav-register"
+                >
+                  {/* Button shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  
+                  {/* Button content */}
+                  <div className="relative flex items-center gap-3">
+                    <Zap className="w-6 h-6 animate-electric-pulse drop-shadow-lg" />
+                    <span className="tracking-wide">JOIN ELITE</span>
+                    <TrendingUp className="w-5 h-5 animate-pulse" />
+                  </div>
+                  
+                  {/* Glowing border */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300 -z-10"></div>
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
+        
+        {/* Bottom accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
       </nav>
 
       {/* Hero Section */}
