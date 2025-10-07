@@ -13,24 +13,25 @@ export default function MainLanding() {
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3 animate-slide-in-left">
               <div className="relative">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center animate-pulse-glow">
-                  <Flame className="w-6 h-6 text-background" />
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary via-accent to-secondary flex items-center justify-center animate-rainbow-glow">
+                  <Flame className="w-8 h-8 text-background animate-electric-pulse" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse-glow"></div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-accent to-primary rounded-full animate-rainbow-glow"></div>
+                <div className="absolute -bottom-1 -left-1 w-4 h-4 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse"></div>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-black tracking-wider neon-text-enhanced" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h1>
+              <h1 className="text-3xl sm:text-4xl font-black tracking-wider neon-text-rainbow animate-electric-pulse" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h1>
               <div className="hidden sm:flex items-center gap-2 ml-4">
-                <Star className="w-4 h-4 text-primary animate-spin-slow" />
-                <span className="text-xs text-primary font-semibold">PREMIUM</span>
+                <Star className="w-5 h-5 text-primary animate-spin-slow" />
+                <span className="text-sm text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text font-black">ELITE</span>
               </div>
             </div>
             <Link href="/register">
               <Button
-                className="bg-gradient-to-r from-primary via-accent to-primary hover:scale-110 transition-all duration-300 animate-slide-in-right glow-button-premium shadow-2xl"
+                className="bg-gradient-to-r from-primary via-accent to-secondary hover:scale-110 transition-all duration-300 animate-slide-in-right glow-button-premium shadow-2xl text-lg font-black px-8 py-3"
                 data-testid="button-nav-register"
               >
-                <Zap className="w-4 h-4 mr-2" />
-                Join Elite
+                <Zap className="w-5 h-5 mr-2 animate-pulse" />
+                JOIN ELITE
               </Button>
             </Link>
           </div>
@@ -38,7 +39,7 @@ export default function MainLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen bg-gradient-to-br from-background via-slate-900 to-background">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen bg-gradient-to-br from-background via-purple-900/30 to-background">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-80" 
           style={{
@@ -51,9 +52,11 @@ export default function MainLanding() {
 
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-primary/20 rounded-full blur-xl animate-float-slow"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-accent/20 rounded-full blur-xl animate-float-delayed"></div>
-          <div className="absolute bottom-40 left-1/4 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-bounce-slow"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary/40 to-accent/30 rounded-full blur-2xl animate-float-slow animate-rainbow-glow"></div>
+          <div className="absolute top-40 right-20 w-40 h-40 bg-gradient-to-br from-secondary/40 to-primary/30 rounded-full blur-3xl animate-float-delayed animate-rainbow-glow"></div>
+          <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-gradient-to-br from-accent/50 to-secondary/40 rounded-full blur-xl animate-bounce-slow animate-rainbow-glow"></div>
+          <div className="absolute top-1/3 right-1/3 w-28 h-28 bg-gradient-to-br from-primary/30 to-accent/40 rounded-full blur-2xl animate-float animate-rainbow-glow"></div>
+          <div className="absolute bottom-1/3 right-10 w-20 h-20 bg-gradient-to-br from-secondary/40 to-primary/30 rounded-full blur-xl animate-bounce-gentle animate-rainbow-glow"></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-30">
@@ -65,12 +68,12 @@ export default function MainLanding() {
                 <div className="w-2 h-2 bg-accent rounded-full animate-ping"></div>
               </div>
 
-              <h2 className="text-5xl sm:text-7xl lg:text-9xl font-serif font-black mb-6 leading-none">
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight">
+              <h2 className="text-6xl sm:text-8xl lg:text-9xl font-serif font-black mb-6 leading-none">
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced">
                   EXPERIENCE
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-gradient-x-reverse bg-300% tracking-tight">
+                <span className="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-x-reverse bg-300% tracking-tight neon-text-enhanced">
                   LUXURY
                 </span>
               </h2>
@@ -84,13 +87,13 @@ export default function MainLanding() {
             <div className="animate-fade-in-up-delayed">
               <a href="http://cashout.realconnect.online" target="_blank" rel="noopener noreferrer">
                 <Button
-                  className="glow-button-mega bg-gradient-to-r from-primary via-accent to-primary text-background px-16 py-6 rounded-full text-2xl font-black shadow-2xl hover:scale-110 transition-all duration-500 relative overflow-hidden group"
+                  className="glow-button-insane text-black px-20 py-8 rounded-full text-3xl font-black shadow-2xl hover:scale-115 transition-all duration-500 relative overflow-hidden group border-4 border-transparent"
                   data-testid="button-play-now"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <Zap className="w-6 h-6 mr-3 animate-pulse" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  <Zap className="w-8 h-8 mr-4 animate-electric-pulse" />
                   PLAY NOW
-                  <TrendingUp className="w-6 h-6 ml-3" />
+                  <TrendingUp className="w-8 h-8 ml-4 animate-electric-pulse" />
                 </Button>
               </a>
 
