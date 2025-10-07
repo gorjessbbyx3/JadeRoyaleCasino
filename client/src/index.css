@@ -427,6 +427,17 @@
   opacity: 0.3;
 }
 
+/* Hero Section Styles */
+.hero-section {
+  background: 
+    linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.3) 100%),
+    url('/casino-neon-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 /* Utility Classes */
 .bg-300% {
   background-size: 300% 300%;

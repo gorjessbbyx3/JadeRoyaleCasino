@@ -38,12 +38,15 @@ export default function MainLanding() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen bg-gradient-to-br from-background via-slate-900 to-background">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0" 
-          style={{backgroundImage: 'url(/casino-neon-bg.jpg)'}}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0 opacity-80" 
+          style={{
+            backgroundImage: 'url(/casino-neon-bg.jpg)',
+            backgroundAttachment: 'fixed'
+          }}
         ></div>
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 z-10"></div>
         <ParticlesBackground />
 
         {/* Floating Elements */}
