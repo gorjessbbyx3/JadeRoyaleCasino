@@ -119,22 +119,13 @@ export default function MainLanding() {
         <div className="max-w-7xl mx-auto relative z-30">
           <div className="text-center">
             <div className="animate-fade-in-up">
-              <h2 className="text-8xl sm:text-9xl lg:text-[12rem] font-black mb-6 leading-none" style={{ fontFamily: 'Brush Script MT, Dancing Script, cursive', WebkitTextStroke: '3px white', paintOrder: 'stroke fill' }}>
+              <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black mb-6 leading-none" style={{ fontFamily: 'Playfair Display, Georgia, serif', WebkitTextStroke: '3px white', paintOrder: 'stroke fill', fontStyle: 'italic' }}>
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
-                    WIN
+                    WIN BIG
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent opacity-50 blur-sm animate-gradient-x bg-300%">
-                    WIN
-                  </div>
-                </span>
-                <br />
-                <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-x-reverse bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
-                    BIG
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent opacity-50 blur-sm animate-gradient-x-reverse bg-300%">
-                    BIG
+                    WIN BIG
                   </div>
                 </span>
               </h2>
