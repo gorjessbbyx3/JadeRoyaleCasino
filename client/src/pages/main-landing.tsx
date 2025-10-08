@@ -119,13 +119,7 @@ export default function MainLanding() {
         <div className="max-w-7xl mx-auto relative z-30">
           <div className="text-center">
             <div className="animate-fade-in-up">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-8 border border-primary/30">
-                <Trophy className="w-5 h-5 text-primary animate-pulse" />
-                <span className="text-sm font-semibold text-primary">Elite Casino Experience</span>
-                <div className="w-2 h-2 bg-accent rounded-full animate-ping"></div>
-              </div>
-
-              <h2 className="text-6xl sm:text-8xl lg:text-9xl font-black mb-6 leading-none" style={{ fontFamily: 'Impact, Arial Black, sans-serif' }}>
+              <h2 className="text-8xl sm:text-9xl lg:text-[12rem] font-black mb-6 leading-none" style={{ fontFamily: 'Brush Script MT, Dancing Script, cursive', WebkitTextStroke: '3px white', paintOrder: 'stroke fill' }}>
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
                     WIN
