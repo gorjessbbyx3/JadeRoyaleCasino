@@ -175,22 +175,6 @@ export default function MainLanding() {
                     <div className="absolute inset-0 rounded-full border-2 border-white/20 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
                   </Button>
                 </a>
-                
-                {/* Floating accent elements around button */}
-                <div className="absolute -top-6 -left-6 w-4 h-4 bg-gradient-to-br from-primary to-accent rounded-full animate-bounce opacity-60 blur-xs"></div>
-                <div className="absolute -top-4 -right-8 w-3 h-3 bg-gradient-to-br from-secondary to-primary rounded-full animate-pulse opacity-70"></div>
-                <div className="absolute -bottom-6 -left-4 w-5 h-5 bg-gradient-to-br from-accent to-secondary rounded-full animate-float opacity-50 blur-xs"></div>
-                <div className="absolute -bottom-4 -right-6 w-4 h-4 bg-gradient-to-br from-primary to-secondary rounded-full animate-bounce-gentle opacity-60"></div>
-              </div>
-
-              <div className="mt-6 px-6 py-3 bg-black/40 backdrop-blur-sm rounded-full border border-green-500/30">
-                <div className="inline-flex items-center gap-3 text-lg font-semibold text-white drop-shadow-lg">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
-                  <span style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>
-                    2,847 players online now
-                  </span>
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
-                </div>
               </div>
             </div>
 
@@ -200,8 +184,8 @@ export default function MainLanding() {
                    data-testid="stat-games"
                    style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 69, 0, 0.2)' }}>
                 <div className="relative text-center">
-                  <div className="text-6xl font-black bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform animate-text-shimmer drop-shadow-lg">500+</div>
-                  <div className="text-lg text-white font-semibold tracking-wide" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>Premium Games</div>
+                  <div className="text-6xl font-black bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform animate-text-shimmer drop-shadow-lg">12,000+</div>
+                  <div className="text-lg text-white font-semibold tracking-wide" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>Different Games</div>
                   <div className="absolute -top-3 -right-3 w-10 h-10 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
@@ -243,10 +227,6 @@ export default function MainLanding() {
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary/30">
-              <Crown className="w-5 h-5 text-white animate-bounce-gentle" />
-              <span className="text-sm font-semibold text-white">Elite Features</span>
-            </div>
             <h3 className="text-5xl sm:text-6xl font-serif font-black mb-6">
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Why Choose Jade Royale
