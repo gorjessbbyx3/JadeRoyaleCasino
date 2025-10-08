@@ -92,20 +92,7 @@ export default function MainLanding() {
 
       {/* Hero Section */}
       <section 
-        className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen"
-        style={{
-          background: `
-            radial-gradient(ellipse at 20% 50%, rgba(255, 69, 0, 0.3) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 20%, rgba(138, 43, 226, 0.3) 0%, transparent 50%),
-            radial-gradient(ellipse at 40% 80%, rgba(0, 191, 255, 0.2) 0%, transparent 50%),
-            linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a0a1a 50%, #0a1a1a 75%, #000000 100%),
-            url(/hero-bg.jpg)
-          `,
-          backgroundSize: 'cover, cover, cover, cover, cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed'
-        }}
+        className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen hero-section-bg"
       >
         {/* Enhanced layered background overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50 z-10"></div>
@@ -175,7 +162,7 @@ export default function MainLanding() {
               
               {/* Enhanced subtitle with layered effects */}
               <div className="relative mb-10">
-                <p className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white/95 tracking-wide relative" 
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white/95 tracking-wide relative" 
                    style={{ 
                      textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 69, 0, 0.2)',
                      fontFamily: 'Inter, sans-serif'
@@ -185,7 +172,7 @@ export default function MainLanding() {
                     {/* Subtle glow behind subtitle */}
                     <div className="absolute inset-0 bg-white/5 blur-lg -z-10 scale-110"></div>
                   </span>
-                </p>
+                </div>
                 
                 {/* Accent line under subtitle */}
                 <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4 animate-pulse"></div>
@@ -251,13 +238,13 @@ export default function MainLanding() {
               </div>
 
               <div className="mt-6 px-6 py-3 bg-black/40 backdrop-blur-sm rounded-full border border-green-500/30">
-                <span className="inline-flex items-center gap-3 text-lg font-semibold text-white drop-shadow-lg">
+                <div className="inline-flex items-center gap-3 text-lg font-semibold text-white drop-shadow-lg">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
                   <span style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>
                     2,847 players online now
                   </span>
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
-                </span>
+                </div>
               </div>
             </div>
 
