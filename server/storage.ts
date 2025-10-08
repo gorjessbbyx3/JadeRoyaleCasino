@@ -18,6 +18,7 @@ function mapUser(row: any): User {
     fullName: row.full_name,
     phone: row.phone,
     password: row.password,
+    agent: row.agent,
   };
 }
 
@@ -34,8 +35,8 @@ export class NileStorage implements IStorage {
 
   async createUser(user: InsertUser): Promise<User> {
     const result = await sql`
-      INSERT INTO users (username, email, full_name, phone, password)
-      VALUES (${user.username}, ${user.email}, ${user.fullName}, ${user.phone}, ${user.password})
+      INSERT INTO users (username, email, full_name, phone, password, agent)
+      VALUES (${user.username}, ${user.email}, ${user.fullName}, ${user.phone}, ${user.password}, ${user.agent || null})
       RETURNING *
     `;
     return mapUser(result[0]);

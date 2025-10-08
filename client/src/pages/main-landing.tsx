@@ -47,13 +47,6 @@ export default function MainLanding() {
                   {/* Text reflection effect */}
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10 opacity-30 animate-pulse"></div>
                 </h1>
-                <div className="flex items-center gap-3 mt-1">
-                  <div className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-4 py-1 border border-primary/30">
-                    <Crown className="w-4 h-4 text-primary animate-bounce-gentle" />
-                    <span className="text-sm text-primary font-black tracking-wide">PREMIUM CASINO</span>
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -260,6 +253,15 @@ export default function MainLanding() {
               </div>
               <h2 className="text-3xl font-black tracking-wider neon-text-enhanced" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h2>
             </div>
+            <Link href="/admin">
+              <Button 
+                variant="outline" 
+                className="mb-6 border-primary/30 hover:bg-primary/10 transition-all duration-300"
+                data-testid="link-admin"
+              >
+                Admin Backend - View Registrations
+              </Button>
+            </Link>
             <p className="text-muted-foreground text-lg mb-6">
               &copy; 2024 Jade Royale. All rights reserved. | 18+ | Play Responsibly
             </p>

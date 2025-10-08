@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import MainLanding from "@/pages/main-landing";
 import Register from "@/pages/register";
+import Admin from "@/pages/admin";
 import NotFound from "@/pages/not-found";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route path="/" component={MainLanding} />
           <Route path="/register" component={Register} />
+          <Route path="/admin" component={Admin} />
           <Route component={NotFound} />
         </Switch>
       </TooltipProvider>

@@ -33,6 +33,7 @@ export default function Register() {
       email: '',
       fullName: '',
       phone: '',
+      agent: '',
       password: '',
       confirmPassword: '',
     },
@@ -170,6 +171,25 @@ export default function Register() {
                             placeholder="+1 (555) 000-0000"
                             {...field}
                             data-testid="input-phone"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="agent"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Agent (Optional)</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Enter agent name/ID"
+                            {...field}
+                            value={field.value || ''}
+                            data-testid="input-agent"
                           />
                         </FormControl>
                         <FormMessage />
