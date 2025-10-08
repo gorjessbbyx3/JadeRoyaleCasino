@@ -727,8 +727,28 @@
   background-size: 300% 300%;
 }
 
+.bg-400% {
+  background-size: 400% 400%;
+}
+
 .tracking-tight {
   letter-spacing: -0.025em;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.blur-xs {
+  filter: blur(2px);
+}
+
+.blur-4xl {
+  filter: blur(72px);
+}
+
+.scale-200 {
+  transform: scale(2);
 }
 
 /* Removed hero background patterns to avoid conflicts */
