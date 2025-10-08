@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertUserSchema } from "@shared/schema";
 import { z } from "zod";
+import { syncUserToExternalBackend } from "./external-api";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/register", async (req, res) => {
@@ -15,6 +16,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const user = await storage.createUser(validatedData);
+      
+      // Sync user to external backend (non-blocking)
+      syncUserToExternalBackend({
+        username: user.username,
+        email: user.email,
+        fullName: user.fullName,
+        phone: user.phone,
+        agent: user.agent
+      }).catch(err => console.error('Background sync failed:', err));
       
       res.status(201).json({ 
         message: "Registration successful",

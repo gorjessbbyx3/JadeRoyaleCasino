@@ -300,15 +300,11 @@ export default function MainLanding() {
               </div>
               <h2 className="text-3xl font-black tracking-wider neon-text-enhanced" style={{fontFamily: 'Cinzel, serif'}}>JADE ROYALE</h2>
             </div>
-            <Link href="/admin">
-              <Button 
-                variant="outline" 
-                className="mb-6 border-primary/30 hover:bg-primary/10 transition-all duration-300"
-                data-testid="link-admin"
-              >
-                Admin Backend - View Registrations
-              </Button>
-            </Link>
+            <div className="mb-6">
+              <p className="text-lg font-semibold text-primary tracking-wider">
+                Powered by GorJess&Co
+              </p>
+            </div>
             <p className="text-muted-foreground text-lg mb-6">
               &copy; 2024 Jade Royale. All rights reserved. | 18+ | Play Responsibly
             </p>
