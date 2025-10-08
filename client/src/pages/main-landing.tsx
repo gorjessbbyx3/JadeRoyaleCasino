@@ -50,7 +50,7 @@ export default function MainLanding() {
                 <div className="flex items-center gap-3 mt-1">
                   <div className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-4 py-1 border border-primary/30">
                     <Crown className="w-4 h-4 text-primary animate-bounce-gentle" />
-                    <span className="text-sm text-transparent morphing-gradient bg-clip-text font-black animate-holographic tracking-wide">PREMIUM CASINO</span>
+                    <span className="text-sm text-primary font-black tracking-wide">PREMIUM CASINO</span>
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ export default function MainLanding() {
                   {/* Button content */}
                   <div className="relative flex items-center gap-3">
                     <Zap className="w-6 h-6 animate-electric-pulse drop-shadow-lg" />
-                    <span className="tracking-wide">JOIN ELITE</span>
+                    <span className="tracking-wide">New User Registration</span>
                     <TrendingUp className="w-5 h-5 animate-pulse" />
                   </div>
                   
