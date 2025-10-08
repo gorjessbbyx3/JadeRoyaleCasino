@@ -3,6 +3,10 @@ import ParticlesBackground from '@/components/particles-background';
 import CasinoChip from '@/components/casino-chip';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
+import video1 from '@assets/4F0CE286-FD88-4504-8901-0F196458AD49_1759892799065.mp4';
+import video2 from '@assets/843bf821-5b19-4227-9fdc-68ad9952f48d-video_1759892799066.mp4';
+import video3 from '@assets/B6F8F7EB-FD75-4827-BCA9-2F03E9A6BAE6_1759892799066.mp4';
+import video4 from '@assets/308140cc-7cec-48af-a6e4-5f46dba4e018-video_1759892799066.mp4';
 
 export default function MainLanding() {
   return (
@@ -189,8 +193,8 @@ export default function MainLanding() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6 border border-primary/30">
-              <Crown className="w-5 h-5 text-primary animate-bounce-gentle" />
-              <span className="text-sm font-semibold text-primary">Elite Features</span>
+              <Crown className="w-5 h-5 text-white animate-bounce-gentle" />
+              <span className="text-sm font-semibold text-white">Elite Features</span>
             </div>
             <h3 className="text-5xl sm:text-6xl font-serif font-black mb-6">
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
@@ -203,40 +207,52 @@ export default function MainLanding() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-1 animate-card-glow-intense" data-testid="feature-payouts">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
-                <Clock className="w-12 h-12 text-background drop-shadow-lg" />
-                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
-              </div>
-              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">Instant Payouts</h4>
-              <p className="text-muted-foreground leading-relaxed">Lightning-fast withdrawals processed in under 60 seconds</p>
+            <div className="group card-pass-effect-enhanced rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-1 animate-card-glow-intense overflow-hidden h-64" data-testid="feature-payouts">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover rounded-2xl"
+              >
+                <source src={video1} type="video/mp4" />
+              </video>
             </div>
 
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-2 animate-card-glow-intense" data-testid="feature-security">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
-                <Shield className="w-12 h-12 text-background drop-shadow-lg" />
-                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
-              </div>
-              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">Fort Knox Security</h4>
-              <p className="text-muted-foreground leading-relaxed">Military-grade encryption with 256-bit SSL protection</p>
+            <div className="group card-pass-effect-enhanced rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-2 animate-card-glow-intense overflow-hidden h-64" data-testid="feature-security">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover rounded-2xl"
+              >
+                <source src={video2} type="video/mp4" />
+              </video>
             </div>
 
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-3 animate-card-glow-intense" data-testid="feature-rewards">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
-                <Crown className="w-12 h-12 text-background drop-shadow-lg" />
-                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
-              </div>
-              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">VIP Rewards</h4>
-              <p className="text-muted-foreground leading-relaxed">Exclusive bonuses up to 500% and premium cashback</p>
+            <div className="group card-pass-effect-enhanced rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-3 animate-card-glow-intense overflow-hidden h-64" data-testid="feature-rewards">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover rounded-2xl"
+              >
+                <source src={video3} type="video/mp4" />
+              </video>
             </div>
 
-            <div className="text-center group card-pass-effect-enhanced p-8 rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-4 animate-card-glow-intense" data-testid="feature-support">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-2xl morphing-gradient flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-2xl relative">
-                <Users className="w-12 h-12 text-background drop-shadow-lg" />
-                <div className="absolute inset-0 morphing-gradient rounded-2xl opacity-20 blur-md animate-pulse"></div>
-              </div>
-              <h4 className="text-2xl font-black mb-4 text-transparent morphing-gradient bg-clip-text animate-text-shimmer">Elite Support</h4>
-              <p className="text-muted-foreground leading-relaxed">Dedicated VIP managers and 24/7 priority assistance</p>
+            <div className="group card-pass-effect-enhanced rounded-2xl glass-card-ultra hover:scale-105 transition-all duration-500 animate-fade-in-stagger-4 animate-card-glow-intense overflow-hidden h-64" data-testid="feature-support">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                className="w-full h-full object-cover rounded-2xl"
+              >
+                <source src={video4} type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
