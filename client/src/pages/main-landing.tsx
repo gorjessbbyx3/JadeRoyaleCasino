@@ -77,13 +77,7 @@ export default function MainLanding() {
                 <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
 
-              <button className="relative inline-flex items-center justify-center px-3 py-3 sm:px-6 sm:py-4 text-sm sm:text-lg font-semibold text-white bg-transparent border-2 border-primary/50 rounded-full backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-primary/10 hover:scale-105 group">
-                <span className="flex items-center gap-2 sm:gap-3">
-                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="hidden sm:inline">Play Demo</span>
-                  <span className="sm:hidden">Demo</span>
-                </span>
-              </button>
+              
             </div>
           </div>
         </div>
