@@ -125,7 +125,7 @@ export default function MainLanding() {
                 <div className="w-2 h-2 bg-accent rounded-full animate-ping"></div>
               </div>
 
-              <h2 className="text-6xl sm:text-8xl lg:text-9xl font-serif font-black mb-6 leading-none">
+              <h2 className="text-6xl sm:text-8xl lg:text-9xl font-black mb-6 leading-none" style={{ fontFamily: 'Impact, Arial Black, sans-serif' }}>
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
                     WIN
@@ -144,11 +144,6 @@ export default function MainLanding() {
                   </div>
                 </span>
               </h2>
-
-              <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-delayed">
-                The ultimate premium casino destination with cutting-edge games, lightning-fast payouts,
-                and exclusive VIP rewards that redefine online gaming excellence
-              </p>
             </div>
 
             <div className="animate-fade-in-up-delayed">
