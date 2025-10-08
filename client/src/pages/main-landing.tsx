@@ -94,74 +94,13 @@ export default function MainLanding() {
       <section 
         className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen hero-section-bg"
       >
-        {/* Enhanced layered background overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5 z-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,69,0,0.1)_0%,transparent_70%)] z-10"></div>
-        
         <ParticlesBackground />
-
-        {/* Enhanced Floating Elements with improved positioning and effects */}
-        <div className="absolute inset-0 pointer-events-none z-20">
-          {/* Large ambient orbs */}
-          <div className="absolute top-16 left-8 w-48 h-48 bg-gradient-to-br from-primary/30 to-accent/20 rounded-full blur-3xl animate-float-slow animate-rainbow-glow opacity-60"></div>
-          <div className="absolute top-32 right-16 w-56 h-56 bg-gradient-to-br from-secondary/25 to-primary/20 rounded-full blur-4xl animate-float-delayed animate-rainbow-glow opacity-50"></div>
-          <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-gradient-to-br from-accent/35 to-secondary/25 rounded-full blur-2xl animate-bounce-slow animate-rainbow-glow opacity-70"></div>
-          
-          {/* Medium floating elements */}
-          <div className="absolute top-1/3 right-1/3 w-32 h-32 bg-gradient-to-br from-primary/40 to-accent/30 rounded-full blur-xl animate-float animate-rainbow-glow opacity-60"></div>
-          <div className="absolute bottom-1/4 right-12 w-28 h-28 bg-gradient-to-br from-secondary/30 to-primary/25 rounded-full blur-lg animate-bounce-gentle animate-rainbow-glow opacity-50"></div>
-          
-          {/* Small accent orbs */}
-          <div className="absolute top-1/4 left-1/3 w-20 h-20 bg-gradient-to-br from-accent/50 to-primary/30 rounded-full blur-md animate-pulse-slow animate-rainbow-glow opacity-40"></div>
-          <div className="absolute bottom-1/2 left-16 w-24 h-24 bg-gradient-to-br from-primary/45 to-secondary/35 rounded-full blur-lg animate-float-slow animate-rainbow-glow opacity-55"></div>
-          <div className="absolute top-2/3 right-1/4 w-16 h-16 bg-gradient-to-br from-secondary/60 to-accent/40 rounded-full blur-sm animate-bounce-gentle animate-rainbow-glow opacity-45"></div>
-          
-          {/* Tiny sparkle effects */}
-          <div className="absolute top-1/5 left-2/3 w-12 h-12 bg-gradient-to-br from-accent/70 to-primary/50 rounded-full blur-sm animate-pulse animate-rainbow-glow opacity-60"></div>
-          <div className="absolute bottom-1/5 right-2/3 w-10 h-10 bg-gradient-to-br from-primary/80 to-secondary/60 rounded-full blur-xs animate-bounce-slow animate-rainbow-glow opacity-50"></div>
-          
-          {/* Geometric accent shapes */}
-          <div className="absolute top-1/6 right-1/6 w-6 h-32 bg-gradient-to-b from-primary/30 to-transparent rotate-45 blur-sm animate-pulse-slow opacity-30"></div>
-          <div className="absolute bottom-1/6 left-1/6 w-32 h-6 bg-gradient-to-r from-accent/30 to-transparent rotate-12 blur-sm animate-float opacity-25"></div>
-        </div>
 
         <div className="max-w-7xl mx-auto relative z-30">
           <div className="text-center">
             <div className="animate-fade-in-up">
-              {/* Enhanced title with multiple text effects */}
-              <div className="relative mb-12">
-                <h2 className="text-7xl sm:text-8xl lg:text-10xl font-black leading-none relative" 
-                    style={{ 
-                      fontFamily: 'Playfair Display, Georgia, serif', 
-                      fontStyle: 'italic',
-                      textShadow: '6px 6px 12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(255, 105, 180, 0.8), 0 0 60px rgba(255, 69, 0, 0.6), 0 0 90px rgba(138, 43, 226, 0.4)'
-                    }}>
-                  <span className="relative inline-block">
-                    {/* Main text with enhanced gradient */}
-                    <span className="bg-gradient-to-r from-primary via-accent via-secondary via-primary to-accent bg-clip-text text-transparent animate-gradient-x bg-400% tracking-tighter drop-shadow-2xl">
-                      WIN BIG
-                    </span>
-                    
-                    {/* Multiple layered glow effects */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary blur-lg opacity-40 animate-gradient-x bg-400% -z-10 scale-125"></div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-accent blur-xl opacity-20 animate-gradient-x-reverse bg-400% -z-20 scale-150"></div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-accent via-secondary to-primary blur-2xl opacity-10 animate-gradient-x bg-400% -z-30 scale-200"></div>
-                    
-                    {/* Holographic reflection effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/10 to-transparent opacity-20 animate-pulse -z-5 skew-x-12"></div>
-                  </span>
-                </h2>
-                
-                {/* Decorative elements around title */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full animate-pulse opacity-60 blur-sm"></div>
-                <div className="absolute -top-2 -right-6 w-6 h-6 bg-gradient-to-br from-secondary to-primary rounded-full animate-bounce opacity-50 blur-xs"></div>
-                <div className="absolute -bottom-4 left-1/4 w-4 h-4 bg-gradient-to-br from-accent to-secondary rounded-full animate-float opacity-70"></div>
-                <div className="absolute -bottom-2 right-1/3 w-5 h-5 bg-gradient-to-br from-primary to-accent rounded-full animate-pulse-slow opacity-60 blur-xs"></div>
-              </div>
-              
               {/* Enhanced subtitle with layered effects */}
-              <div className="relative mb-10">
+              <div className="relative mb-10 pt-20">
                 <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white/95 tracking-wide relative" 
                    style={{ 
                      textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 69, 0, 0.2)',
