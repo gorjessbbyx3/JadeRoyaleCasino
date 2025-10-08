@@ -751,3 +751,26 @@
   transform: scale(2);
 }
 
+/* Mobile optimizations */
+@media (max-width: 475px) {
+  .text-responsive-hero {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+  
+  .text-responsive-large {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .px-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-mobile {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+

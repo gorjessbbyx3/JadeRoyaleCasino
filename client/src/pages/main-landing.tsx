@@ -1,4 +1,4 @@
-import { Crown, Users, Shield, Clock, Star, Zap, TrendingUp, Trophy, Flame } from 'lucide-react';
+import { Crown, Users, Shield, Clock, Star, Zap, TrendingUp, Trophy, Flame, UserPlus, Play } from 'lucide-react';
 import ParticlesBackground from '@/components/particles-background';
 import CasinoChip from '@/components/casino-chip';
 import { Button } from '@/components/ui/button';
@@ -26,7 +26,7 @@ export default function MainLanding() {
                   {/* Inner glow effect */}
                   <div className="absolute inset-2 rounded-full bg-gradient-to-br from-white/20 to-transparent opacity-50"></div>
                 </div>
-                
+
                 {/* Floating decorative elements */}
                 <div className="absolute -top-3 -right-3 w-8 h-8 morphing-gradient rounded-full animate-rainbow-glow shadow-lg opacity-80">
                   <div className="absolute inset-1 rounded-full bg-gradient-to-br from-white/30 to-transparent"></div>
@@ -34,29 +34,29 @@ export default function MainLanding() {
                 <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-gradient-to-br from-secondary to-accent rounded-full animate-pulse shadow-md">
                   <Star className="w-3 h-3 text-background absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
-                
+
                 {/* Orbiting ring */}
                 <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-spin-slow"></div>
                 <div className="absolute inset-2 rounded-full border border-accent/40 animate-spin-slow" style={{animationDirection: 'reverse'}}></div>
               </div>
-              
+
               {/* Brand text */}
               <div className="flex flex-col">
-                <h1 className="text-4xl sm:text-5xl font-black tracking-widest neon-text-rainbow animate-text-shimmer relative" 
-                    style={{
-                      fontFamily: 'Cinzel, serif', 
-                      WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)', 
-                      textShadow: '0 0 20px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 69, 0, 0.6), 0 0 60px rgba(138, 43, 226, 0.4)'
-                    }}>
-                  JADE ROYALE
-                  {/* Text reflection effect */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/10 opacity-30 animate-pulse"></div>
-                </h1>
+                {/* The following div has been optimized for mobile by adjusting font sizes and margins */}
+                <div className="animate-slide-in-left-delayed">
+                  <h1 className="text-2xl sm:text-4xl font-serif font-black text-white mb-1 sm:mb-2 tracking-tight">
+                    Jade Royale
+                  </h1>
+                  <p className="text-primary/90 text-sm sm:text-lg font-medium tracking-wide">
+                    Premium Gaming Experience
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Navigation Actions */}
-            <div className="flex items-center gap-4 animate-slide-in-right">
+            {/* The following div has been optimized for mobile by adjusting gap, padding, text sizes, and icon sizes. */}
+            <div className="flex items-center gap-3 sm:gap-6 animate-slide-in-right">
               {/* Live indicator */}
               <div className="hidden md:flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-full px-4 py-2 border border-green-500/30">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
@@ -64,29 +64,30 @@ export default function MainLanding() {
               </div>
 
               {/* Register button */}
-              <Link href="/register">
-                <Button
-                  className="relative bg-gradient-to-r from-primary via-accent to-secondary hover:scale-110 transition-all duration-500 glow-button-mega shadow-2xl text-xl font-black px-10 py-4 rounded-full border-2 border-transparent overflow-hidden group"
-                  data-testid="button-nav-register"
-                >
-                  {/* Button shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  
-                  {/* Button content */}
-                  <div className="relative flex items-center gap-3">
-                    <Zap className="w-6 h-6 animate-electric-pulse drop-shadow-lg" />
-                    <span className="tracking-wide">New User Registration</span>
-                    <TrendingUp className="w-5 h-5 animate-pulse" />
-                  </div>
-                  
-                  {/* Glowing border */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300 -z-10"></div>
-                </Button>
+              <Link
+                href="/register"
+                className="relative inline-flex items-center justify-center px-4 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-bold text-black bg-gradient-to-r from-primary to-accent rounded-full shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-primary/50 group overflow-hidden"
+                data-testid="button-nav-register"
+              >
+                <span className="relative z-10 flex items-center gap-2 sm:gap-3">
+                  <UserPlus className="w-4 h-4 sm:w-6 sm:h-6" />
+                  <span className="hidden xs:inline sm:inline">Join Now</span>
+                  <span className="xs:hidden sm:hidden">Join</span>
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
+
+              <button className="relative inline-flex items-center justify-center px-3 py-3 sm:px-6 sm:py-4 text-sm sm:text-lg font-semibold text-white bg-transparent border-2 border-primary/50 rounded-full backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-primary/10 hover:scale-105 group">
+                <span className="flex items-center gap-2 sm:gap-3">
+                  <Play className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="hidden sm:inline">Play Demo</span>
+                  <span className="sm:hidden">Demo</span>
+                </span>
+              </button>
             </div>
           </div>
         </div>
-        
+
         {/* Bottom accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
       </nav>
@@ -119,7 +120,7 @@ export default function MainLanding() {
                     <div className="absolute inset-0 bg-white/5 blur-lg -z-10 scale-110"></div>
                   </span>
                 </div>
-                
+
                 {/* Accent line under subtitle */}
                 <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4 animate-pulse"></div>
               </div>
@@ -150,7 +151,7 @@ export default function MainLanding() {
                     {/* Multiple shine effects */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1200"></div>
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 translate-x-full group-hover:-translate-x-full transition-transform duration-1400 delay-100"></div>
-                    
+
                     {/* Button content */}
                     <div className="relative flex items-center gap-6 z-20">
                       <div className="relative">
@@ -166,11 +167,11 @@ export default function MainLanding() {
                         <div className="absolute inset-0 blur-md bg-white/20 rounded-full animate-pulse delay-75"></div>
                       </div>
                     </div>
-                    
+
                     {/* Enhanced glow backgrounds */}
                     <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-700 -z-10 scale-150"></div>
                     <div className="absolute inset-0 bg-gradient-to-r from-secondary via-primary to-accent opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-700 -z-20 scale-200"></div>
-                    
+
                     {/* Pulsing border effect */}
                     <div className="absolute inset-0 rounded-full border-2 border-white/20 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity duration-300"></div>
                   </Button>

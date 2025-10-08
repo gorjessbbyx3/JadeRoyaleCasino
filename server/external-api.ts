@@ -1,6 +1,6 @@
 
 const EXTERNAL_API_URL = 'http://cashout.realconnect.online/backend';
-const API_TOKEN = 'sk_live_jade_royale_2024_auto_register_token_12345';
+const API_TOKEN = 'dl21WC2j6I0fWGC0WszKVJtbJ';
 
 export async function syncUserToExternalBackend(userData: {
   username: string;
