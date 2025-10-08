@@ -7,6 +7,7 @@ import video1 from '@assets/4F0CE286-FD88-4504-8901-0F196458AD49_1759892799065.m
 import video2 from '@assets/843bf821-5b19-4227-9fdc-68ad9952f48d-video_1759892799066.mp4';
 import video3 from '@assets/B6F8F7EB-FD75-4827-BCA9-2F03E9A6BAE6_1759892799066.mp4';
 import video4 from '@assets/308140cc-7cec-48af-a6e4-5f46dba4e018-video_1759892799066.mp4';
+import backgroundImage from '@assets/IMG_4980_1759896782981.jpeg';
 
 export default function MainLanding() {
   return (
@@ -92,7 +93,13 @@ export default function MainLanding() {
 
       {/* Hero Section */}
       <section 
-        className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen hero-section-bg"
+        className="relative pt-32 pb-20 px-4 overflow-hidden min-h-screen"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
         <ParticlesBackground />
 

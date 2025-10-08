@@ -751,11 +751,3 @@
   transform: scale(2);
 }
 
-/* Hero Section Background */
-.hero-section-bg {
-  background-image: url('../attached_assets/IMG_4980_1759896782981.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
