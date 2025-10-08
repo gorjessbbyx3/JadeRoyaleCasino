@@ -116,65 +116,92 @@ export default function MainLanding() {
         <div className="max-w-7xl mx-auto relative z-30">
           <div className="text-center">
             <div className="animate-fade-in-up">
-              <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black mb-6 leading-none" style={{ fontFamily: 'Playfair Display, Georgia, serif', WebkitTextStroke: '3px white', paintOrder: 'stroke fill', fontStyle: 'italic' }}>
+              <h2 className="text-7xl sm:text-8xl lg:text-9xl font-black mb-8 leading-none relative" 
+                  style={{ 
+                    fontFamily: 'Playfair Display, Georgia, serif', 
+                    fontStyle: 'italic',
+                    textShadow: '4px 4px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 105, 180, 0.6), 0 0 40px rgba(255, 69, 0, 0.4)'
+                  }}>
                 <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight neon-text-enhanced text-shimmer animate-text-shimmer">
+                  <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent animate-gradient-x bg-300% tracking-tight drop-shadow-2xl">
                     WIN BIG
                   </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent opacity-50 blur-sm animate-gradient-x bg-300%">
-                    WIN BIG
-                  </div>
+                  {/* Enhanced glow effect behind text */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary blur-md opacity-30 animate-gradient-x bg-300% -z-10 scale-110"></div>
                 </span>
               </h2>
+              
+              {/* Enhanced subtitle */}
+              <p className="text-2xl sm:text-3xl font-bold text-white/90 mb-8 tracking-wide drop-shadow-lg" 
+                 style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>
+                Experience the Ultimate Casino Adventure
+              </p>
             </div>
 
             <div className="animate-fade-in-up-delayed">
               <a href="http://cashout.realconnect.online" target="_blank" rel="noopener noreferrer">
                 <Button
-                  className="glow-button-insane text-black px-20 py-8 rounded-full text-3xl font-black shadow-2xl hover:scale-115 transition-all duration-500 relative overflow-hidden group border-4 border-transparent"
+                  className="relative bg-gradient-to-r from-primary via-accent to-secondary text-black px-20 py-8 rounded-full text-3xl font-black shadow-2xl hover:scale-110 transition-all duration-500 overflow-hidden group border-4 border-white/20"
                   data-testid="button-play-now"
+                  style={{ 
+                    boxShadow: '0 0 30px rgba(255, 69, 0, 0.6), 0 0 60px rgba(255, 105, 180, 0.4), 0 10px 30px rgba(0, 0, 0, 0.4)',
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'
+                  }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                  <Zap className="w-8 h-8 mr-4 animate-electric-pulse" />
-                  PLAY NOW
-                  <TrendingUp className="w-8 h-8 ml-4 animate-electric-pulse" />
+                  <div className="relative flex items-center gap-4 z-10">
+                    <Zap className="w-8 h-8 animate-electric-pulse drop-shadow-md" />
+                    <span className="tracking-wide">PLAY NOW</span>
+                    <TrendingUp className="w-8 h-8 animate-electric-pulse drop-shadow-md" />
+                  </div>
+                  {/* Enhanced glow background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300 -z-10 scale-150"></div>
                 </Button>
               </a>
 
-              <div className="mt-4 text-sm text-muted-foreground animate-pulse">
-                <span className="inline-flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
-                  2,847 players online now
+              <div className="mt-6 px-6 py-3 bg-black/40 backdrop-blur-sm rounded-full border border-green-500/30">
+                <span className="inline-flex items-center gap-3 text-lg font-semibold text-white drop-shadow-lg">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
+                  <span style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>
+                    2,847 players online now
+                  </span>
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
                 </span>
               </div>
             </div>
 
             {/* Enhanced Stats Grid */}
-            <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="glass-card-ultra p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up group hover:scale-105 transition-all duration-500 animate-card-glow-intense" data-testid="stat-games">
-                <div className="relative">
-                  <div className="text-5xl font-black text-transparent morphing-gradient bg-clip-text mb-3 group-hover:scale-110 transition-transform animate-text-shimmer">500+</div>
-                  <div className="text-base text-muted-foreground font-medium">Premium Games</div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
+            <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="glass-card-ultra p-10 rounded-2xl card-pass-effect-enhanced animate-slide-up group hover:scale-105 transition-all duration-500 animate-card-glow-intense backdrop-blur-md border border-white/20" 
+                   data-testid="stat-games"
+                   style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 69, 0, 0.2)' }}>
+                <div className="relative text-center">
+                  <div className="text-6xl font-black bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform animate-text-shimmer drop-shadow-lg">500+</div>
+                  <div className="text-lg text-white font-semibold tracking-wide" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>Premium Games</div>
+                  <div className="absolute -top-3 -right-3 w-10 h-10 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
               </div>
 
-              <div className="glass-card-ultra p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed group hover:scale-105 transition-all duration-500 animate-card-glow-intense" data-testid="stat-support">
-                <div className="relative">
-                  <div className="text-5xl font-black text-transparent morphing-gradient bg-clip-text mb-3 group-hover:scale-110 transition-transform animate-text-shimmer">24/7</div>
-                  <div className="text-base text-muted-foreground font-medium">VIP Support</div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
+              <div className="glass-card-ultra p-10 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed group hover:scale-105 transition-all duration-500 animate-card-glow-intense backdrop-blur-md border border-white/20" 
+                   data-testid="stat-support"
+                   style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 105, 180, 0.2)' }}>
+                <div className="relative text-center">
+                  <div className="text-6xl font-black bg-gradient-to-r from-accent via-primary to-secondary bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform animate-text-shimmer drop-shadow-lg">24/7</div>
+                  <div className="text-lg text-white font-semibold tracking-wide" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>VIP Support</div>
+                  <div className="absolute -top-3 -right-3 w-10 h-10 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
               </div>
 
-              <div className="glass-card-ultra p-8 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed-more group hover:scale-105 transition-all duration-500 animate-card-glow-intense" data-testid="stat-payouts">
-                <div className="relative">
-                  <div className="text-5xl font-black text-transparent morphing-gradient bg-clip-text mb-3 group-hover:scale-110 transition-transform animate-text-shimmer">$5M+</div>
-                  <div className="text-base text-muted-foreground font-medium">Daily Payouts</div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
+              <div className="glass-card-ultra p-10 rounded-2xl card-pass-effect-enhanced animate-slide-up-delayed-more group hover:scale-105 transition-all duration-500 animate-card-glow-intense backdrop-blur-md border border-white/20" 
+                   data-testid="stat-payouts"
+                   style={{ boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 191, 255, 0.2)' }}>
+                <div className="relative text-center">
+                  <div className="text-6xl font-black bg-gradient-to-r from-secondary via-accent to-primary bg-clip-text text-transparent mb-4 group-hover:scale-110 transition-transform animate-text-shimmer drop-shadow-lg">$5M+</div>
+                  <div className="text-lg text-white font-semibold tracking-wide" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}>Daily Payouts</div>
+                  <div className="absolute -top-3 -right-3 w-10 h-10 morphing-gradient rounded-full opacity-0 group-hover:opacity-100 animate-pulse transition-opacity shadow-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity blur-sm"></div>
                 </div>
               </div>
             </div>
